@@ -23,8 +23,10 @@ In `WinForms` you can show _any_ control (e.g. `PictureBox`) over any _other_ co
                 maxHeight: HEIGHT
             );
             pictureBox.Location = new Point(
-                webView21.Right - pictureBox.Width,
-                webView21.Bottom - pictureBox.Height);
+                webView21.Right 
+                - pictureBox.Width
+                - SystemInformation.VerticalScrollBarWidth - 1,
+                webView21.Bottom - pictureBox.Height - 1);
 
             webView21.Controls.Add(pictureBox);
         }
@@ -59,5 +61,13 @@ To make the picture box do this:
         return newPictureBox;
     }
 
+***
+**Image Paths**
 
-  [1]: https://i.stack.imgur.com/jNc1i.png
+If you add more images, make sure you set this property for them:
+
+[![image-paths][2]][2]
+
+
+  [1]: https://i.stack.imgur.com/a6tJm.png
+  [2]: https://i.stack.imgur.com/ZQPf6.png

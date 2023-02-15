@@ -34,8 +34,10 @@ namespace control_over_webview_control
                 maxHeight: HEIGHT
             );
             pictureBox.Location = new Point(
-                webView21.Right - pictureBox.Width,
-                webView21.Bottom - pictureBox.Height);
+                webView21.Right 
+                - pictureBox.Width
+                - SystemInformation.VerticalScrollBarWidth - 1,
+                webView21.Bottom - pictureBox.Height - 1);
 
             webView21.Controls.Add(pictureBox);
         }
